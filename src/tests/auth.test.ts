@@ -19,11 +19,6 @@ describe("getApiKey", () => {
 
   test("ApiKey valid - should return API key", () => {
     const header = { authorization: "ApiKey 12345" };
-    expect(getAPIKey(header)).toBeNull();
+    expect(getAPIKey(header)).toBe("12345");
   });
-
-  // test("ApiKey valid - should return API key", () => {
-  //   const header = { authorization: "ApiKey 12345" };
-  //   expect(getAPIKey(header)).toBe("12345");
-  // });
 });
